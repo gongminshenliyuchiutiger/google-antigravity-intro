@@ -25,6 +25,7 @@
             --layer2-color: #34A853; /* 成長綠 */
             --layer3-color: #FBBC05; /* 活力黃 */
             --layer4-color: #EA4335; /* 效能紅 */
+            --layer5-color: #673AB7; /* 智慧紫 */
         }
 
         html, body {
@@ -133,6 +134,7 @@
         h3#layer2 { border-left-color: var(--layer2-color); background-color: rgba(52, 168, 83, 0.05); }
         h3#layer3 { border-left-color: var(--layer3-color); background-color: rgba(251, 188, 5, 0.05); }
         h3#layer4 { border-left-color: var(--layer4-color); background-color: rgba(234, 67, 53, 0.05); }
+        h3#layer5 { border-left-color: var(--layer5-color); background-color: rgba(103, 58, 183, 0.05); }
 
         .icon-title {
             margin-right: 12px;
@@ -522,6 +524,7 @@
         <a href="#layer2" class="toc-item"><i class="fa-solid fa-folder-tree"></i><span>第二層：檔案處理</span></a>
         <a href="#layer3" class="toc-item"><i class="fa-solid fa-table-list"></i><span>第三層：雲端連網</span></a>
         <a href="#layer4" class="toc-item"><i class="fa-solid fa-window-maximize"></i><span>第四層：桌面打包</span></a>
+        <a href="#layer5" class="toc-item"><i class="fa-solid fa-bolt"></i><span>第五層：SKILLS 應用</span></a>
     </div>
 
     <div class="container">
@@ -722,8 +725,92 @@
                 </div>
             </div>
 
+            <div class="app-block">
+                <div class="app-header">
+                    <h4>8. 學生 PDF 作業批次合併工具</h4>
+                </div>
+                <div class="step-box">
+                    <strong>實作步驟：</strong><br>
+                    1. 將所有學生的 PDF 作業放進資料夾 ➜ 2. 拖入軟體 ➜ 3. 貼上指令 ➜ 4. 產出一個名為「全班作業彙整.pdf」的總檔。
+                </div>
+                <div class="prompt-container">
+                    <button class="copy-btn" onclick="copyPrompt(this)" title="複製指令"><i class="fa-regular fa-copy"></i></button>
+                    <div class="prompt-text">你是一位 Python 自動化工程師。請幫我寫一個「PDF 檔案批次合併工具」：<br>
+                    【任務目標】：掃描目前目錄下所有的 PDF 檔案，並按檔名排序。將它們合併成一個單一的 PDF 檔案。<br>
+                    【技術細節】：使用 <span class="highlight-param">PyPDF2</span> 函式庫進行處理。請協助我撰寫完整代碼並自動執行合併任務。</div>
+                </div>
+            </div>
+
+            <div class="app-block">
+                <div class="app-header">
+                    <h4>9. Excel 成績通知單批次生成器</h4>
+                </div>
+                <div class="step-box">
+                    <strong>實作步驟：</strong><br>
+                    1. 準備好 Excel 成績表 ➜ 2. 拖入軟體 ➜ 3. 貼上指令 ➜ 4. 系統會根據每位學生的成績，自動產生獨立的 Word 診斷報告。
+                </div>
+                <div class="prompt-container">
+                    <button class="copy-btn" onclick="copyPrompt(this)" title="複製指令"><i class="fa-regular fa-copy"></i></button>
+                    <div class="prompt-text">你是一位行政自動化專家。請開發一個「學生成績報告生成器」：<br>
+                    【數據來源】：讀取資料夾中的 Excel 檔案。<br>
+                    【邏輯處理】：針對每一列學生數據，自動帶入預設的評語模板，生成一份 Word 檔案（例如 <span class="highlight-param">「學號_姓名_成績單.docx」</span>）。<br>
+                    【執行要求】：請協助我撰寫 Python 代碼並直接運行，產出所有學生的個人檔案。</div>
+                </div>
+            </div>
+
+            <div class="app-block">
+                <div class="app-header">
+                    <h4>10. 圖片教材批次浮水印機器人</h4>
+                </div>
+                <div class="step-box">
+                    <strong>實作步驟：</strong><br>
+                    1. 放入教材圖片 ➜ 2. 貼上指令 ➜ 3. 圖片右下角會自動打上「老師教學專用」的半透明浮水印，防止盜圖。
+                </div>
+                <div class="prompt-container">
+                    <button class="copy-btn" onclick="copyPrompt(this)" title="複製指令"><i class="fa-regular fa-copy"></i></button>
+                    <div class="prompt-text">你是一位影像處理專家。請幫我寫一個「批次圖片浮水印處理程式」：<br>
+                    【任務說明】：對資料夾內所有的 JPG 與 PNG 圖片進行處理。<br>
+                    【核心功能】：在圖片的右下角添加一段半透明的文字浮水印（內容為：<span class="highlight-param">新北市立雙溪高中教學素材</span>）。<br>
+                    【技術要求】：請使用 Python 的 Pillow 函式庫，並在代碼完成後直接啟動執行。</div>
+                </div>
+            </div>
+
             <!-- 第三層 -->
             <h3 id="layer3"><i class="fa-solid fa-table-list"></i> 第三層：雲端連網（Google Apps Script 應用）</h3>
+
+            <div class="app-block">
+                <div class="app-header">
+                    <h4>11. 雲端 QR Code 快速點名系統</h4>
+                </div>
+                <div class="step-box">
+                    <strong>實作步驟：</strong><br>
+                    1. 貼上指令 ➜ 2. 部署為 GAS 網頁 ➜ 3. 學生掃碼輸入座號。老師的試算表會即時標註「已出席」並記錄時間。
+                </div>
+                <div class="prompt-container">
+                    <button class="copy-btn" onclick="copyPrompt(this)" title="複製指令"><i class="fa-regular fa-copy"></i></button>
+                    <div class="prompt-text">你是一位雲端開發專家。請開發一個「班級雲端點名系統」：<br>
+                    【學生介面】：提供一個簡約的網頁，學生只需輸入 <span class="highlight-param">「座號」</span> 並按下送出。<br>
+                    【雲端邏輯】：透過 Google Apps Script 將數據寫入指定的試算表，自動判斷重複提交並記錄簽到時間。<br>
+                    【回饋】：成功簽到後，網頁需顯示「簽到成功，祝你有美好的一天！」。</div>
+                </div>
+            </div>
+
+            <div class="app-block">
+                <div class="app-header">
+                    <h4>12. 雲端課堂作業繳交狀態儀表板</h4>
+                </div>
+                <div class="step-box">
+                    <strong>實作步驟：</strong><br>
+                    1. 連結 Google 表單或雲端硬碟 ➜ 2. 貼上指令 ➜ 3. 網頁會以紅綠燈方式顯示誰還沒交作業，讓老師一目了然。
+                </div>
+                <div class="prompt-container">
+                    <button class="copy-btn" onclick="copyPrompt(this)" title="複製指令"><i class="fa-regular fa-copy"></i></button>
+                    <div class="prompt-text">你是一位數據視覺化專家。請開發一個「雲端作業繳交進度儀表板」：<br>
+                    【功能需求】：串接 Google 試算表（作業繳交紀錄），網頁端以格子圖陣列顯示全班 <span class="highlight-param">30 位同學</span> 的狀態。<br>
+                    【視覺效果】：已繳交的座號顯示綠色，未繳交的顯示紅色。每 10 秒自動重新整理一次數據。<br>
+                    【目的】：適合在投影幕上播放，即時視覺化全班進度。</div>
+                </div>
+            </div>
 
             <div class="app-block">
                 <div class="app-header">
@@ -813,18 +900,18 @@
 
             <div class="app-block">
                 <div class="app-header">
-                    <h4>18. 本機專屬閱卷小幫手</h4>
+                    <h4>18. 臉部漸變動畫製作小程式</h4>
                 </div>
                 <div class="step-box">
                     <strong>實作步驟：</strong><br>
-                    1. 準備學生 Word 作業檔案 ➜ 2. 拖入軟體 ➜ 3. 貼上指令。這將結合 AI 的分析能力與本機檔案處理，非常適合批次處理大量作文。
+                    1. 準備兩張人臉圖片（例如學生小時候與現在）➜ 2. 拖入軟體 ➜ 3. 貼上指令。這能自動計算特徵點，產出絲滑的臉部漸變轉場影片。
                 </div>
                 <div class="prompt-container">
                     <button class="copy-btn" onclick="copyPrompt(this)" title="複製指令"><i class="fa-regular fa-copy"></i></button>
-                    <div class="prompt-text">你是一位 AI 系統整合工程師。請開發一個「AI 桌面閱卷助理」：<br>
-                    【任務】：使用者可將 Word 作業檔拖入程式，系統自動調用 OpenAI/Gemini API 進行深度批閱。<br>
-                    【分析指標】：針對 <span class="highlight-param">「錯別字檢查、邏輯連貫性、佳句推薦、給分建議」</span> 產出分析報告。<br>
-                    【GUI 設計】：具備進度條顯示目前批改進度，並能一鍵產出總評 Excel 檔。最後請協助我打包為 .exe。</div>
+                    <div class="prompt-text">你是一位電腦視覺專家。請開發一個「AI 臉部漸變 (Face Morphing) 工具」：<br>
+                    【任務說明】：使用者輸入兩張圖片，程式自動偵測人臉特徵點（Landmarks），並生成中間的漸變幀。<br>
+                    【核心功能】：產出一段 <span class="highlight-param">5 秒鐘的 MP4 影片</span>，展現從 A 臉變換到 B 臉的過程。<br>
+                    【技術要求】：請使用 OpenCV 與 Mediapipe 進行處理，最後協助我打包為 .exe 執行檔。</div>
                 </div>
             </div>
 
@@ -861,6 +948,104 @@
                 </div>
             </div>
 
+        </section>
+
+        <section>
+            <h2><i class="fa-solid fa-bolt icon-title"></i>伍、 進階必殺技：如何應用 SKILLS 讓 AI 更有力？</h2>
+            
+            <div class="intro-box">
+                <p><strong>「老師，為什麼我下指令 AI 總是做不到位？」</strong></p>
+                <p>這不是 AI 不聰明，而是您還沒賦予它「專家的靈魂」。<strong>SKILLS</strong> 就是讓 Google Antigravity 脫胎換骨的關鍵。以下為您整理更深度的應用指南。</p>
+            </div>
+
+            <h3 id="layer5"><i class="fa-solid fa-graduation-cap"></i> 1. 核心觀念：SKILLS 到底是什麼？</h3>
+            <p>請將 SKILLS 想像成 AI 的<strong>「專業作業標準程序 (SOP)」</strong>：</p>
+            <ul>
+                <li><strong>一般指令 (Prompt)</strong>：像是在路邊攔下一位路人，請他幫你拿個東西。他會做，但不一定專業。</li>
+                <li><strong>應用 SKILLS</strong>：像是聘請了一位<strong>帶有專業工具箱的資深工程師</strong>。他手裡拿著您給他的手冊（SKILLS 檔案），清楚知道第一步要先做什麼、出錯了要怎麼修、最後要產出什麼格式。</li>
+            </ul>
+
+            <h3 id="layer-scenarios"><i class="fa-solid fa-magnifying-glass-chart"></i> 2. 什麼時候「適合」使用 SKILLS？</h3>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th><i class="fa-solid fa-circle-question"></i> 情境判斷</th>
+                        <th><i class="fa-solid fa-check-double"></i> 為什麼要用 SKILLS？</th>
+                    </tr>
+                    <tr>
+                        <td><strong>任務太複雜（需要多個步驟）</strong><br>例如：搜尋 -> 分析 -> 寫作 -> 排版</td>
+                        <td>SKILLS 能讓 AI <strong>自主管理流程</strong>。它會先搜尋，看完後自己決定下一步，不需要您在那裡「做完 A 再叫它做 B」。</td>
+                    </tr>
+                    <tr>
+                        <td><strong>需要「極度精準」的格式</strong><br>例如：成績單、官方公文格式</td>
+                        <td>將格式規範寫進 SKILLS 檔。AI 每次執行都會嚴格遵守，<strong>避免隨機發揮或遺忘細節</strong>。</td>
+                    </tr>
+                    <tr>
+                        <td><strong>需要 AI 「操作工具」時</strong><br>例如：讀取特定檔案、打開虛擬瀏覽器</td>
+                        <td>SKILLS 會明確定義 AI <strong>「何時」該用「什麼工具」</strong>。這比單純的對話更具「行動力」。</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3 id="layer-how-to"><i class="fa-solid fa-gears"></i> 3. 實戰演練：一般指令 vs. SKILLS 的差異</h3>
+            <div class="app-block">
+                <div class="app-header">
+                    <h4>範例任務：幫我做一份「全球暖化」的深度教案</h4>
+                </div>
+                <div class="step-box" style="background-color: #fce4ec; border-left-color: #e91e63;">
+                    <strong>❌ 只用一般指令：</strong>「請幫我寫一份全球暖化的教案。」<br>
+                    <strong>結果：</strong>AI 根據舊有知識吐出一段文字。內容可能很空洞，且沒有最新的數據或圖片。
+                </div>
+                <div class="step-box" style="background-color: #e8f5e9; border-left-color: #4caf50;">
+                    <strong>✅ 使用「備課大師 SKILLS」：</strong>將 <code>lesson_master.md</code> 拖入視窗，並說「啟動 SKILLS 幫我備課」。<br>
+                    <strong>結果：</strong>AI 會自動<strong>打開瀏覽器</strong>搜尋 2026 年最新氣候報告 ➜ <strong>分析</strong> 學生程度 ➜ <strong>規劃</strong> 三個層次的互動問題 ➜ <strong>最後</strong> 生成帶有圖片說明的完整講義。
+                </div>
+            </div>
+
+            <h3 id="layer-create"><i class="fa-solid fa-pen-nib"></i> 4. 老師如何自製一個簡單的 SKILLS？</h3>
+            <div class="alert-box">
+                <strong><i class="fa-solid fa-file-lines"></i> 萬用 SKILLS 範本結構：</strong><br>
+                在電腦上建立一個 <code>.md</code> 檔案，寫入以下內容後拖入 Antigravity 即可：<br>
+                <code># [SKILLS 名稱]</code><br>
+                <code>## 角色設定：你是... (例如：專業國文老師)</code><br>
+                <code>## 工具規範：你可以使用瀏覽器搜尋最新解釋...</code><br>
+                <code>## 工作流程：1. 先讀取檔案 2. 進行修正 3. 產出 Word 檔</code><br>
+                <code>## 輸出限制：字數不超過 500 字，必須使用繁體中文。</code>
+            </div>
+
+            <div class="app-block">
+                <div class="app-header">
+                    <h4>如何載入並使用？（快速複習）</h4>
+                </div>
+                <div class="step-box">
+                    <strong>1. 準備檔案</strong>：將 SKILLS 指令寫在記事本存成 <code>.md</code>。<br>
+                    <strong>2. 拖入 AI</strong>：直接檔案拖進右側對話框。<br>
+                    <strong>3. 喚醒靈魂</strong>：對 AI 說「請讀取這個 SKILLS 並開始工作」，見證奇蹟！
+                </div>
+            </div>
+
+            <h3 id="layer-example"><i class="fa-solid fa-code"></i> 5. 實戰範例：『超級教案大師』SKILLS 腳本</h3>
+            <p>您可以將以下內容複製到 Markdown 檔案（例如 <code>lesson_pro.md</code>），這就是一個完整的 SKILLS：</p>
+            <div class="prompt-container">
+                <button class="copy-btn" onclick="copyPrompt(this)" title="複製指令"><i class="fa-regular fa-copy"></i></button>
+                <div class="prompt-text">
+# SKILLS 名稱：超級教案大師 (Super Lesson Plan Master)<br><br>
+## 角色設定 (Role)<br>
+你是一位擁有 20 年教學經驗的「資深課程設計專家」。你精通 108 課綱、PBL 專題式學習與差異化教學策略。<br><br>
+## 工具使用規範 (Tools)<br>
+1. **瀏覽器 (Search)**：在撰寫教案前，必須搜尋該主題在 2025-2026 年的最新新聞、科學數據或社會議題。<br>
+2. **檔案處理 (Files)**：若使用者上傳了課本內容，必須優先參考該內容進行延伸。<br>
+3. **圖片生成 (Image)**：為教案中困難的概念生成一張輔助說明的示意圖。<br><br>
+## 標準工作流程 (Workflow)<br>
+1. **分析主題**：確認學習者年段（國小/國中/高中）與學科領域。<br>
+2. **資料檢索**：搜尋相關的即時案例，增加課程的引起動機。<br>
+3. **撰寫結構**：包含：學習目標、引起動機 (5min)、發展活動 (30min)、綜合活動 (10min) 與 課後評量。<br>
+4. **生成視覺化素材**：為課程生成一張吸引人的封面圖或概念圖。<br><br>
+## 輸出限制 (Constraints)<br>
+- 必須使用繁體中文，語氣具備啟發性。<br>
+- 教案長度控制在 A4 兩頁內，並提供下載連結。
+                </div>
+            </div>
         </section>
 
     </div>
