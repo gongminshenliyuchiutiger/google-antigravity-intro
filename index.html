@@ -253,11 +253,72 @@
             color: #ffffff;
         }
 
+        .app-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
         h4 {
             font-size: 1.25rem;
             color: #333;
-            margin-bottom: 12px;
+            margin-bottom: 0;
             margin-top: 0;
+        }
+
+        /* 練習範例檔下載按鈕 */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #4285F4, #34A853);
+            color: #ffffff !important;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 3px 8px rgba(66, 133, 244, 0.3);
+            transition: all 0.25s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(66, 133, 244, 0.45);
+            background: linear-gradient(135deg, #3367d6, #2d9249);
+            color: #ffffff !important;
+            text-decoration: none;
+        }
+
+        .download-btn i {
+            font-size: 1.05rem;
+        }
+
+        /* 步驟內下載標籤連結 */
+        .step-download-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-decoration: none;
+            background: rgba(66, 133, 244, 0.1);
+            padding: 2px 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(66, 133, 244, 0.25);
+            transition: all 0.2s ease;
+            vertical-align: middle;
+            margin: 0 3px;
+        }
+
+        .step-download-link:hover {
+            background: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+            box-shadow: 0 2px 6px rgba(66, 133, 244, 0.3);
         }
 
         .step-box {
@@ -711,10 +772,13 @@
             <div class="app-block">
                 <div class="app-header">
                     <h4>7. 檔案整理與命名機器人</h4>
+                    <a href="download/%5B%E7%AF%84%E4%BE%8B%E6%AA%94%5D%E6%AA%94%E6%A1%88%E6%95%B4%E7%90%86%E8%88%87%E5%91%BD%E5%90%8D%E6%A9%9F%E5%99%A8%E4%BA%BA.zip" download="[範例檔]檔案整理與命名機器人.zip" class="download-btn">
+                        <i class="fa-solid fa-file-zipper"></i> 下載練習範例檔 (.zip)
+                    </a>
                 </div>
                 <div class="step-box">
                     <strong>實作步驟：</strong><br>
-                    1. 將所有亂命名的學生作業放進「作業」資料夾 ➜ 2. 將資料夾拖入軟體 ➜ 3. 貼上指令 ➜ 4. 觀察 AI 執行更名，檔案瞬間變整齊。
+                    1. 下載 <a href="download/%5B%E7%AF%84%E4%BE%8B%E6%AA%94%5D%E6%AA%94%E6%A1%88%E6%95%B4%E7%90%86%E8%88%87%E5%91%BD%E5%90%8D%E6%A9%9F%E5%99%A8%E4%BA%BA.zip" download="[範例檔]檔案整理與命名機器人.zip" class="step-download-link"><i class="fa-solid fa-download"></i> [範例檔]檔案整理與命名機器人.zip</a> 並解壓縮（內含班級名冊與未整理作業資料夾）➜ 2. 將資料夾拖入軟體 ➜ 3. 貼上指令 ➜ 4. 觀察 AI 執行更名，檔案瞬間變整齊。
                 </div>
                 <div class="prompt-container">
                     <button class="copy-btn" onclick="copyPrompt(this)" title="複製指令"><i class="fa-regular fa-copy"></i></button>
